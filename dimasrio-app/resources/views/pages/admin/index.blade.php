@@ -15,6 +15,7 @@
         </div>
 
         <div class="row">
+            <!-- Total Pengguna -->
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-primary">
@@ -31,6 +32,7 @@
                 </div>
             </div>
 
+            <!-- Total Produk -->
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-danger">
@@ -46,7 +48,39 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Total Distributor -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-success">
+                        <i class="far fa-building"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Total Distributor</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ $distributors }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-success">
+                        <i class="far fa-building"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Flash Sale</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ $flashsales }}
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 </div>
 @endsection

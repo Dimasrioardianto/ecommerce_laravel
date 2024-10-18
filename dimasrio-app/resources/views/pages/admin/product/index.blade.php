@@ -17,7 +17,7 @@
             <div class="table-responsive">
                 <table class="table table-bordered table-md">
                     <tr>
-                        <th>#</th>
+                        <th>No</th>
                         <th>Nama Produk</th>
                         <th>Harga Produk</th>
                         <th>Action</th>

@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('123456789'),
             'point' => 10000,
         ]);
-/*
+
         Admin::create([
             'name' => 'Admin',
             'username' => 'Admin',
@@ -38,6 +38,6 @@ class DatabaseSeeder extends Seeder
             'dosen_pembimbing1' => 'Fajri Profesio Putra, M.Cs',
             'dosen_pembimbing2' => 'Elvi Rahmi, M.Kom',
         
-        ]);*/
+        ]);
     }
 }

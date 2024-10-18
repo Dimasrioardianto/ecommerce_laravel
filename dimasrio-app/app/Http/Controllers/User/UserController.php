@@ -7,14 +7,15 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\User;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\Flashsale;
 
 class UserController extends Controller
 {
     public function index()
     {
         $products = Product::all();
-
-        return view('pages.user.index', compact('products'));
+        $flashsales = Flashsale::where('status', true)->get();
+        return view('pages.user.index', compact('products','flashsales'));
     }
 
     public function detail_product($id) {
@@ -39,5 +40,6 @@ class UserController extends Controller
             Alert::error('Gagal!','Point anda tidak cukup!');
             return redirect()->back();
         }
+
     }
 }

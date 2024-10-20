@@ -14,7 +14,7 @@ class UserController extends Controller
     public function index()
     {
         $products = Product::all();
-        $flashsales = Flashsale::where('status', true)->get();
+        $flashsales = FlashSale::where('status', true)->get();
         return view('pages.user.index', compact('products','flashsales'));
     }
 

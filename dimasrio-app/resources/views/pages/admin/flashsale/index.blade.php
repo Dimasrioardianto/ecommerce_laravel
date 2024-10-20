@@ -28,7 +28,7 @@
                         <th>Stok</th>
                         <th>Tanggal Mulai</th>
                         <th>Tanggal Berakhir</th>
-                        <th>Tindakan</th>
+                        <th>Aksi</th>
                     </tr>
                     @php
                         $no = 0;

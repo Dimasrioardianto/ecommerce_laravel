@@ -38,9 +38,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
                 <div class="section-title">
-                    <h1>Latest Products</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h1>Produk</h1>
+                    <p>Ini adalah halaman Produk yang ada di WEB ini.</p>
                 </div>
             </div>
         </div>

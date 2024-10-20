@@ -18,11 +18,11 @@
           <span>Produk</span></a>
       </li>
       <li class="{{ Request::is('admin.distributor') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ route('admin.distributor') }}"><i class="fas fa-box"></i>
+        <a class="nav-link" href="{{ route('admin.distributor') }}"><i class="fas fa-user"></i>
           <span>Distributor</span></a>
       </li>
       <li class="{{ Request::is('flashsale') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ route('admin.flashsale') }}"><i class="fas fa-box"></i>
+        <a class="nav-link" href="{{ route('admin.flashsale') }}"><i class="fas fa-percentage"></i>
           <span>Flash Sale</span></a>
       </li>
     </ul>

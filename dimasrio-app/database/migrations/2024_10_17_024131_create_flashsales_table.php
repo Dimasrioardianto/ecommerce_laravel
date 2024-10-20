@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('discount_price', 8, 2);
             $table->decimal('discount_percentage', 5, 2)->nullable();
             $table->timestamp('start_time')->nullable();
-$table->timestamp('end_time')->nullable();
+            $table->timestamp('end_time')->nullable();
 
             $table->integer('stock');
             $table->boolean('status')->default(1);

@@ -12,8 +12,6 @@
                 <div class="breadcrumb-item">Detail Produk</div>
             </div>
         </div>
-        <a href="{{ route('admin.product') }}" class="btn btn-icon icon-left btn-warning"><i class="fas fa-
-arrow-left"></i> Kembali</a>
         <div class="row mt-4">
             <div class="col-12 col-md-4 col-lg-12 m-auto">
                 <article class="article article-style-c">
@@ -33,6 +31,10 @@ arrow-left"></i> Kembali</a>
                         <p>
                             {{ $product->description }}
                         </p>
+                        <div class="card-footer text-right">
+                        <a href="{{ route('admin.product') }}" class="btn btn-icon icon-left btn-warning"><i class="fas fa-
+                        arrow-left"></i> Kembali</a>
+                        </div>
                     </div>
                 </article>
             </div>

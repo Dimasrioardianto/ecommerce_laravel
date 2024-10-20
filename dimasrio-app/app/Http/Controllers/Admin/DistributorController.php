@@ -55,6 +55,13 @@ class DistributorController extends Controller
         return redirect()->route('admin.distributor');
 
     }
+    // untuk menampilkan detail
+    public function detail($id)
+    {
+        $distributor = Distributor::findOrFail($id);
+        return view('pages.admin.distributor.detail', compact('distributor'));
+    }
+
     //  menampilkan form edit distributor
     public function edit($id)
     {
@@ -103,12 +110,12 @@ class DistributorController extends Controller
         return redirect()->route('admin.distributor');
     }
 
-    public function delete($id) 
+    public function delete($id)
     {
         $distributor = Distributor::findOrFail($id);
-       
+
         $distributor->delete();
-    
+
         if ($distributor) {
             Alert::success('Berhasil', 'Distributor berhasil dihapus!');
             return redirect()->back();
@@ -117,4 +124,4 @@ class DistributorController extends Controller
             return redirect()->back();
         }
     }
-}    
+}

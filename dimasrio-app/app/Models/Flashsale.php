@@ -22,6 +22,6 @@ class Flashsale extends Model
     ];
 
     public function getDiscountPercentageAttribute() {
-        return(($this->original_price - $this->original_price) / $this->original_price) * 100;
+        return(($this->original_price - $this->discount_price) / $this->original_price) * 100;
     }
 }

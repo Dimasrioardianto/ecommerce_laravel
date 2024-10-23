@@ -40,6 +40,6 @@ class UserController extends Controller
             Alert::error('Gagal!','Point anda tidak cukup!');
             return redirect()->back();
         }
-
+        
     }
 }

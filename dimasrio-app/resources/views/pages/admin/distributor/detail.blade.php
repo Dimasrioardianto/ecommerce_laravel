@@ -21,8 +21,8 @@
                 <p><strong>Kota:</strong> {{ $distributor->kota }}</p>
                 <p><strong>Provinsi:</strong> {{ $distributor->provinsi }}</p>
                 <p><strong>Kontak:</strong> {{ $distributor->kontak }}</p>
-                <p><strong>Email:</strong> {{ $distributor->email }}</p>
-                <p><strong>Alamat:</strong> {{ $distributor->alamat }}</p>
+                <strong>Email:</strong>  <a href =
+                 "malito:{{ $distributor->email }}"> {{ $distributor->email }}</a>
             </div>
             <div class="card-footer">
                 <a href="{{ route('admin.distributor') }}" class="btn btn-primary">Kembali</a>

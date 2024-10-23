@@ -86,20 +86,26 @@
         <h1 class="text-center">Flash Sale</h1>
         <div class="row">
             @forelse($flashsales as $flashSaleItem)
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="product card text-center">
-                        <img src="{{ asset('images/' . $flashSaleItem->image) }}" class="card-img-top"
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-product">
+                        <img src="{{ asset('images/' . $flashSaleItem->image) }}" class="img-fluid"
                             alt="{{ $flashSaleItem->product_name }}">
-                        <div class="card-body">
-                            <h2 class="card-title">{{ $flashSaleItem->product_name }}</h2>
-                            <p class="card-text"><strike>Rp{{ number_format($flashSaleItem->original_price, 2) }}</strike>
-                            </p>
-                            <p class="card-text">Rp{{ number_format($flashSaleItem->discount_price, 2) }}</p>
-                            <p class="card-text">Diskon: {{ round($flashSaleItem->discount_percentage) }}%</p>
-                            <p class="card-text">Sisa waktu:
-                                {{ \Carbon\Carbon::parse($flashSaleItem->end_time)->diffForHumans() }}</p>
-                            <p class="card-text">Stok tersisa: {{ $flashSaleItem->stock }}</p>
-                            <button class="btn btn-primary">Beli Sekarang</button>
+                        <div class="product-details">
+                            <h6>{{ $flashSaleItem->product_name }}</h6>
+                            <div class="price">
+                                <p><strike>Rp{{ number_format($flashSaleItem->original_price, 2) }}</strike></p>
+                                <h6>Rp{{ number_format($flashSaleItem->discount_price, 2) }}</h6>
+                                <p class="discount">Diskon: {{ round($flashSaleItem->discount_percentage) }}%</p>
+                            </div>
+                            <div class="prd-bottom">
+                                <p>Sisa waktu: {{ \Carbon\Carbon::parse($flashSaleItem->end_time)->diffForHumans() }}</p>
+                                <p>Stok tersisa: {{ $flashSaleItem->stock }}</p>
+                                <a class="social-info" href="javascript:void(0);"
+                                    onclick="confirmPurchase('{{ $flashSaleItem->id }}', '{{ Auth::user()->id }}')">
+                                    <span class="ti-bag"></span>
+                                    <p class="hover-text">Beli Sekarang</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +117,7 @@
         </div>
     </div>
 </section>
-<!-- end flash sale Area -->
+<!-- end flash sale Area -->
 
 <!-- SweetAlert2 for confirmation -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
